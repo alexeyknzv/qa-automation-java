@@ -9,11 +9,13 @@ import java.time.Instant;
 
 public class TimestampMessageDecorator {
     public static int messageCount = 1;
+
     /**
      * Adds index number and timestamp with current date-time
      * @param message string to add timestamp
      * @return given string with index number and timestamp in the beginning
      */
+
     public static String decorate(String message) {
 
         final var decoratedMessage = messageCount + " " + Instant.now() + " " + message;
