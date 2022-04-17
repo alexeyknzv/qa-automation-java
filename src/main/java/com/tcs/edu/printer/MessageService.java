@@ -19,8 +19,8 @@ public class MessageService {
     public static void process(Severity severityLevel, String message, String... messages) {
         ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(message) + " " + SeverityMap.mapToString(severityLevel)));
 
-        for (String iterMessage: messages) {
-            ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(iterMessage) + " " + SeverityMap.mapToString(severityLevel)));
+        for (String itemMessage: messages) {
+            ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(itemMessage) + " " + SeverityMap.mapToString(severityLevel)));
         }
     }
 }

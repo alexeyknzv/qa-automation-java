@@ -1,6 +1,6 @@
 package com.tcs.edu.printer;
 import com.tcs.edu.decorator.CounterDecorator;
-import com.tcs.edu.decorator.TimestampMessageDecorator;
+
 /**
  * Class for printing a message and increase counter
  * @author Alexey Knyazev

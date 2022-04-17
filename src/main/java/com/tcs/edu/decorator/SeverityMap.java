@@ -8,7 +8,7 @@ package com.tcs.edu.decorator;
 public class SeverityMap {
     /**
      * Provides string for given severity level
-     * @param severityLevel severity level of type enum
+     * @param severityLevel severity level type enum
      * @return the string for severity level
      */
     public static String mapToString(Severity severityLevel){
