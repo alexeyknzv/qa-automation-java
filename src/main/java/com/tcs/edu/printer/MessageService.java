@@ -12,15 +12,11 @@ import com.tcs.edu.decorator.SeverityMap;
 
 public class MessageService {
     /**
-     * Adds severity, timestamp decorator, counter decorator to messages and prints them
+     * Adds severity, timestamp decorator, counter decorator to message and prints the result
      * @param severityLevel severity level
      * @param message message to decorate and print
      */
-    public static void process(Severity severityLevel, String message, String... messages) {
+    public static void process(Severity severityLevel, String message) {
         ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(message) + " " + SeverityMap.mapToString(severityLevel)));
-
-        for (String iterMessage: messages) {
-            ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(iterMessage) + " " + SeverityMap.mapToString(severityLevel)));
-        }
     }
 }
