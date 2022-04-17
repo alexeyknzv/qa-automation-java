@@ -1,4 +1,5 @@
 package com.tcs.edu.printer;
+import com.tcs.edu.decorator.CounterDecorator;
 import com.tcs.edu.decorator.TimestampMessageDecorator;
 /**
  * Class for printing a message and increase counter
@@ -15,6 +16,6 @@ public class ConsolePrinter {
     public static void print(String message) {
 
         System.out.println(message);
-        TimestampMessageDecorator.messageCount++;
+        CounterDecorator.messageCount++;
     }
 }
