@@ -9,7 +9,6 @@ import java.time.Instant;
 
 public class TimestampMessageDecorator {
     public static int messageCount = 1;
-    private static final int PAGE_SIZE = 2;
 
     /**
      * Adds index number and timestamp with current date-time
@@ -19,10 +18,7 @@ public class TimestampMessageDecorator {
 
     public static String decorate(String message) {
 
-        var decoratedMessage = String.format("%d %s %s", messageCount, Instant.now(), message);
-        if (messageCount % PAGE_SIZE == 0) {
-            decoratedMessage = String.format("%s\n---", decoratedMessage);
-        }
+        final var decoratedMessage = String.format("%d %s %s", messageCount, Instant.now(), message);
         return decoratedMessage;
     }
 }
