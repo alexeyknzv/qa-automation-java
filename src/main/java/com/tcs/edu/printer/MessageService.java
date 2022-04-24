@@ -20,7 +20,9 @@ public class MessageService {
         ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(message) + " " + SeverityMap.mapToString(severityLevel)));
 
         for (String itemMessage: messages) {
-            ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(itemMessage) + " " + SeverityMap.mapToString(severityLevel)));
+            if (itemMessage != null) {
+                ConsolePrinter.print(CounterDecorator.decorate(TimestampMessageDecorator.decorate(itemMessage) + " " + SeverityMap.mapToString(severityLevel)));
+            }
         }
     }
 }
